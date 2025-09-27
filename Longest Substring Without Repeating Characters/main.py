@@ -2,19 +2,19 @@ s = "pww"
 a = [] #"p", "w", "w", "k", "e", "w"
 # s = "pw"
 
-left = []
-right = []
+left = 0
+right = 0
 
 maxlen = 0
 
 for i in range(len(s)):
     if s[i] in a:
-        left.append(s[:i])
-        right.append(s[i:])
-        print(left, right)
+        left = i - 1
+        right = i
+    a.append(s[i])
+
+print(s[left:right])
         
-    else:
-        a.append(s[i])
-        maxlen += 1
+
 
 
