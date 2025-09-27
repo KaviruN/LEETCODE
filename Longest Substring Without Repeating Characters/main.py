@@ -7,5 +7,5 @@ for i in range(len(s)):
         left = s[:i]
         a.remove(s[i])
     a.append(s[i])
-print(a)
+
 
