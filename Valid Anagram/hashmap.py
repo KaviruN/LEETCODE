@@ -29,3 +29,6 @@ t = "nagacam"
 
 a = {'a': 3, 'n': 1, 'g': 1, 'r': 1, 'm': 1} 
 b = {'n': 1, 'a': 3, 'g': 1, 'c': 1, 'm': 1}
+
+for i in a:
+    print(a[i], b[i])
