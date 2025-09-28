@@ -6,8 +6,9 @@ def isAnagram(s, t):
 
     for i in range(len(s)):
         sCount[s[i]] = sCount.get(s[i], 0) + 1
+        tCount[t[i]] = sCount.get(t[i], 0) + 1
 
-    print(sCount)  
+    print(sCount, tCount)  
 
 
 isAnagram(s, t)
