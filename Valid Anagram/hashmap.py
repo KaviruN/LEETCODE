@@ -5,9 +5,12 @@ def isAnagram(s, t):
     sCount, tCount = {}, {}
 
     for i in range(len(s)):
-        sCount[s[i]] += 1
+        sCount[s[i]] = sCount.get(s[i], 0) + 1
 
     print(sCount)  
+
+
+isAnagram(s, t)
 
 
 # a = {}
