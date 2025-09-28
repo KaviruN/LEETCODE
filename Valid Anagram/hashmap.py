@@ -1,24 +1,25 @@
 s = "anagram"
-t = "nagacam"
+t = "nagbcam"
 
-# def isAnagram(s, t):
-#     sCount, tCount = {}, {}
+def isAnagram(s, t):
+    sCount, tCount = {}, {}
 
-#     if len(s) != len(t):
-#         return False
+    if len(s) != len(t):
+        return False
 
-#     for i in range(len(s)):
-#         sCount[s[i]] = sCount.get(s[i], 0) + 1 #make a dictionary of chr cpunt ex: {"a":1, "b":1} and if find other one add 1 simpily cound the same chrs
-#         tCount[t[i]] = tCount.get(t[i], 0) + 1
+    for i in range(len(s)):
+        sCount[s[i]] = sCount.get(s[i], 0) + 1 #make a dictionary of chr cpunt ex: {"a":1, "b":1} and if find other one add 1 simpily cound the same chrs
+        tCount[t[i]] = tCount.get(t[i], 0) + 1
 
-#     # for j in sCount:
-#     #     if 
+    for j in sCount:
+        if sCount[j] != tCount.get(j, 0):
+            return False
+    return True
 
-#     print(sCount, tCount)  
 
 
 # isAnagram(s, t)
-# print(isAnagram(s, t))
+print(isAnagram(s, t))
 
 # a = {}
 
