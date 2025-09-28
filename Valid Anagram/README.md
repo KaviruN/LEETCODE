@@ -23,3 +23,18 @@ nagaram = naaagrm (sorted by frequency)
 anagram = aaanmgr (sorted by frequency)
 Same letters, same count!
 ```
+
+## Solutions
+
+### Approach 1: Sorting Method
+**File:** `main.py`
+- **Time Complexity:** O(n log n)
+- **Space Complexity:** O(1) or O(n) depending on sorting implementation
+- **Method:** Sort both strings and compare
+
+### Approach 2: HashMap/Dictionary Method  
+**File:** `hashmap.py`
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(n)
+- **Method:** Count character frequency using dictionaries
+- **Key Insight:** Use `dict.get(key, 0) + 1` to count characters
