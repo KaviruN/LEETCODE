@@ -2,18 +2,20 @@ nums = [3,4,5,6]
 
 target = 7
 
-# def towSum(nums, target):
-#     numhash = {} #val:index {3: 0, 4: 1, 5: 2, 6: 3}
-#     for i, n in enumerate(nums):
-#         diff = target - n
-#         numhash[n] = i
+def towSum(nums, target):
+    numhash = {} #val:index {3: 0, 4: 1, 5: 2, 6: 3}
+    for i, n in enumerate(nums):
+        diff = target - n
+        numhash[n] = i
+        if diff in numhash:
+            print(f'{diff}:{numhash[diff]} - {n}:{i}')
 
 
 
 
-# towSum(nums, target)
+towSum(nums, target)
 
-a = {3: 0, 4: 1, 5: 2, 6: 3}
+# a = {3: 0, 4: 1, 5: 2, 6: 3}
 
-if 3 in a:
-    print(f'3:{a[3]}')
+# if 3 in a:
+#     print(f'3:{a[3]}')
