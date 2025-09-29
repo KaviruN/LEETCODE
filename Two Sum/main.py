@@ -7,7 +7,7 @@ def towSum(nums, target):
     for i, n in enumerate(nums):
         diff = target - n
         numhash[n] = i
-        if diff in numhash:
+        if diff in numhash and n != diff: #and you may not use the same element twice.
             return [numhash[diff], i]
 
 
