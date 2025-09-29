@@ -14,3 +14,6 @@ target = 7
 # towSum(nums, target)
 
 a = {3: 0, 4: 1, 5: 2, 6: 3}
+
+if 3 in a:
+    print(f'3:{a[3]}')
