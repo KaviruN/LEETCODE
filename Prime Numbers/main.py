@@ -1,8 +1,8 @@
-n = 10
+n = 100
 
 def findPrimeNumbers(n):
     odd = []
-    for i in n:
+    for i in range(n):
         if i % 2 == 1:
             odd.append(i)
 
