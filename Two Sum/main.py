@@ -1,6 +1,6 @@
-nums = [3,4,5,6]
+nums = [3,2,4]
 
-target = 7
+target = 6
 
 def towSum(nums, target):
     numhash = {} #val:index {3: 0, 4: 1, 5: 2, 6: 3}
@@ -8,12 +8,12 @@ def towSum(nums, target):
         diff = target - n
         numhash[n] = i
         if diff in numhash:
-            print(f'{diff}:{numhash[diff]} - {n}:{i}')
+            return [numhash[diff], i]
 
 
 
 
-towSum(nums, target)
+print(towSum(nums, target))
 
 # a = {3: 0, 4: 1, 5: 2, 6: 3}
 
