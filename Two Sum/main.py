@@ -4,8 +4,11 @@ target = 7
 
 def towSum(nums, target):
     numhash = {} #val:index
-    for i in nums:
-         numhash[nums[i]] = i
-    print(numhash)
+    index = 0
+    for i, n in enumerate(nums):
+        print(i)
+        #  numhash[n] = i
+    # print(numhash)
 
 
+towSum(nums, target)
