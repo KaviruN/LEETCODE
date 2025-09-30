@@ -1,23 +1,27 @@
-strs = ["act","cat"]
+strs = ["act","cat","tan","nat","bat"]
 
 def groupAnagrams(strs):
-    strsCount = {}
+    hashmap = {}
 
     for i in range(len(strs)):
-        for char in range(len(strs[i])):
-            if strs[i] not in strsCount:
-                strsCount[strs[i]] = {}
-            if strs[i][char] in strsCount[strs[i]]:
-                strsCount[strs[i]][strs[i][char]] += 1
-            else:
-                strsCount[strs[i]][strs[i][char]] = 1
+        s = ''.join(sorted(strs[i]))
+        if s in hashmap:
+            hashmap[s].append(strs[i])
+        else:
+            hashmap[s] = [strs[i]]
+
+    return list(hashmap.values())
+    
+    
 
                 
         
-    print(strsCount)
+print(groupAnagrams(strs))
 
 
-groupAnagrams(strs)
+
+
+
 
 # a = {"abc":{'a':1}, "bcd":{'b':1...}}
 
