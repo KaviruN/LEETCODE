@@ -9,6 +9,12 @@ def topKelements(nums, k):
     for n, c in hashmap.items():
         freq[c].append(n)
 
-    print(freq)
+    res = []
 
-topKelements(nums, k)
+    for i in range(len(freq) - 1, 0, -1):
+        for n in freq[n]:
+            res.append(freq[n])
+            if len(res) == k:
+                return res
+
+print(topKelements(nums, k))
