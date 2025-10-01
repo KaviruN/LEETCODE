@@ -6,8 +6,9 @@ def topKelements(nums, k):
     freq = [[] for i in range(len(nums) + 1)] #[[], [], [], [], [], [], []]
     for n in nums:
         hashmap[n] = hashmap.get(n, 0) + 1
-    print(hashmap)
+    for n, c in hashmap.items():
+        freq[c].append(n)
 
-
+    print(freq)
 
 topKelements(nums, k)
