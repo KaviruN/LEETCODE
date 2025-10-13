@@ -1,6 +1,24 @@
+import time
+import tracemalloc
+
 nums = [3,3]
 
 target = 6
+
+def measure(func, *args, **kwargs):
+    tracemalloc.start()
+    start = time.time()
+
+    result = func(*args, **kwargs)
+
+    end = time.time()
+    current, peak = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+
+    print(f"Execution time: {end - start:.6f} sec")
+    print(f"Peak memory usage: {peak / 10**6:.3f} MB")
+    return result
+
 
 def towSum(nums, target):
     numhash = {} #val:index {3: 0, 4: 1, 5: 2, 6: 3}
@@ -12,7 +30,7 @@ def towSum(nums, target):
 
 
 
-
+measure(towSum(nums, target))
 print(towSum(nums, target))
 
 # a = {3: 0, 4: 1, 5: 2, 6: 3}
