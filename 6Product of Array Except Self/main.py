@@ -12,9 +12,7 @@ def a(nums):
     # # for k in range(nums):
     # #     answer.append(prefixes[k] * suffixes[k])
     # # return answer
-    return prefixes, suffixes
-
-
+    return prefixes, list(reversed(suffixes))
 
 print(a(nums))
 # a(nums)
