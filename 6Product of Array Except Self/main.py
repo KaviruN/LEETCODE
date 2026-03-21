@@ -6,7 +6,7 @@ def a(nums):
     for i in range(len(nums) - 1):
         pre.append(nums[i] * nums[i + 1])
     for j in range(len(nums) - 1, -1, -1):
-        suf.append(0, (nums[i] * nums[i - 1]))
+        suf.insert(0, (nums[i] * nums[i - 1]))
 
 
 # print(a(nums))
