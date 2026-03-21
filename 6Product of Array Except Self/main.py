@@ -6,16 +6,15 @@ def a(nums):
     answer = []
     for i in range(len(nums) - 1):
         prefixes.append(nums[i] * prefixes[i])
-    for j in range(len(nums) - 1, 0, -1):
+    for j in range(len(nums) - 1, -1, -1):
         # suffixes.append(nums[j] * suffixes[j])
-        for k in range(len(suffixes)):
-            suffixes.append(nums[j] * suffixes[k])
+        print(j)
     # # for k in range(nums):
     # #     answer.append(prefixes[k] * suffixes[k])
     # # return answer
-    return prefixes, suffixes
+    # return prefixes, suffixes
 
 
 
-print(a(nums))
-# a(nums)
+# print(a(nums))
+a(nums)
