@@ -17,14 +17,14 @@ nums = [5, 2, 3]
 
 
 def a(nums):
-    prefixes = 1
+    prefixes = [1] * len(nums) # just to add a fix len to the list
     suffixes = 1#5 , 
     answer = []
-    for i in range(len(nums) - 1):
-        prefixes.append(nums[i] * prefixes[i])
+    # for i in range(len(nums) - 1):
+    #     prefixes.add(nums[i] * prefixes[i])
     # for j in range(len(nums) - 1, 0, -1):
-    #     suffixes.append(nums[j] * suffixes[len(suffixes) - 1])
-    #     # print(j)
+    return prefixes
+
 
 
 
