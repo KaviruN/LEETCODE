@@ -9,10 +9,11 @@ def a(nums):
     for j in range(len(nums) - 1, 0, -1):
         suffixes.append(nums[j] * suffixes[len(suffixes) - 1])
         # print(j)
-    # # for k in range(nums):
-    # #     answer.append(prefixes[k] * suffixes[k])
-    # # return answer
-    return prefixes, list(reversed(suffixes))
+    suffixes = list(reversed(suffixes))
+    for k in range(len(nums)):
+        answer.append(prefixes[k] * suffixes[k])
+    return answer
+    # return prefixes, list(reversed(suffixes))
 
 print(a(nums))
 # a(nums)
