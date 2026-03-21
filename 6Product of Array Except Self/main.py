@@ -1,13 +1,17 @@
-nums = [1,2,3,4]
+nums = [5, 2, 3]
 
 def a(nums):
-    pre = [1]
-    suf = [1]
+    prefixes = [1]
+    suffixes = [1]
+    answer = []
     for i in range(len(nums) - 1):
-        pre.append(nums[i] * nums[i + 1])
+        prefixes.append(nums[i] * nums[i + 1])
     for j in range(len(nums) - 1, 0, -1):
-        suf.append(nums[j] * nums[j - 1])
-    return suf
+        suffixes.append(nums[j] * nums[j - 1])
+    for k in range(nums):
+        answer.append(prefixes[k] * suffixes[k])
+    return answer
+
 
 
 print(a(nums))
