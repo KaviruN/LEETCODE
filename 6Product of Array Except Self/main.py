@@ -1,10 +1,11 @@
 nums = [1,2,3,4]
 
 def a(nums):
-    pre = []
+    pre = [1]
     suf = []
-    for i in range(len(nums)):
-        print(i)
+    for i in range(len(nums) + 1):
+        pre.append(nums[i + 1] * nums[i])
+    return pre
 
 
-a(nums)
+print(a(nums))
