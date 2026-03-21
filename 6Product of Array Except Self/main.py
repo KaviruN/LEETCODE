@@ -17,13 +17,18 @@ nums = [5, 2, 3]
 
 
 def a(nums):
-    prefixes = 1
     answer = [1]  * len(nums) # just to add a fix len to the list
-    suffixes = 1#5 , 
+
+    prefixes = 1
     for i in range(len(nums)):
-        answer[i] = (nums[i] * prefixes[i])
-    # for j in range(len(nums) - 1, 0, -1):
-    return prefixes
+        answer[i] = prefixes
+        prefixes *= nums[i]
+
+    postfix = 1
+    for j in range(len(nums) - 1, -1, -1):
+        answer[j] *= postfix
+        postfix *= nums[j]
+    return answer
 
 
 
