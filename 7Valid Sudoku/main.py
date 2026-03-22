@@ -22,6 +22,8 @@ def a(board):
         for c in range(9):
             if board[r][c] == ".":
                 continue
-            print(r, c)
+            cols[c].add(board[r][c])
+            rows[r].add(board[r][c])
+    
 
 a(board)
