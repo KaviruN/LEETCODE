@@ -19,5 +19,8 @@ def a(board):
     squares = defaultdict(set)
     for r in range(9):
         for c in range(9):
-            print(r,c)
+            if board[r][c] == ".":
+                continue
+            print(r, c)
 
+a(board)
